@@ -48,14 +48,11 @@ for count, row in enumerate(reader):
 # never forget this, if you want the changes to be saved:
 connection.commit()
 
+print()
 cursor.execute("SELECT * FROM transactions") 
 print("fetchall:")
 result = cursor.fetchall() 
 for r in result:
     print(r)
-cursor.execute("SELECT * FROM transactions")
-print("\nfetch one:")
-res = cursor.fetchone() 
-print(res)
 
 connection.close()
